@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>677A48CA-52DB-4F0E-BA3B-945E666FE4F1</string>
+	<string>15608E3B-F461-4357-9C70-C8021A1DD1FC</string>
 	<key>IDESourceControlProjectName</key>
 	<string>opengl-part</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>091EBD10-0119-4860-8398-71EC23AC6E54</string>
 			<key>IDESourceControlWCCName</key>
-			<string>teil_1</string>
+			<string>opengl-part</string>
 		</dict>
 	</array>
 </dict>
