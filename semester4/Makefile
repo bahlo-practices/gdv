@@ -2,7 +2,7 @@
 CC=g++
 CFLAGS=-Wall -framework OpenGL -framework GLUT
 LDFLAGS=
-SOURCES=
+SOURCES=erweiterungen/*.cpp
 INCLUDES=erweiterungen/
 EXECUTABLE=main.o
 

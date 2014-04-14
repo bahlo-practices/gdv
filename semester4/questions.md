@@ -11,3 +11,6 @@
 9. a) Ja, wenn man die Fenstergröße verändert, verändert sich auch das View
    b)
 
+# Teil 2
+10. Man sieht die Rückseite, weil die Kamera so ausgerichtet ist
+
