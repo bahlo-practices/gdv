@@ -33,16 +33,17 @@ void RenderScene() //Zeichenfunktion
   glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
 
   glutWireCube(0.2);
+  glTranslatef(0.09, 0.09, 0);
   glRotatef(fRotation, 0.0f, 0.0f, 1.0f);
 
-  //Oberarm
+  // Oberarm
   glPushMatrix();
     glScalef(1,0.5,0);
     glTranslatef(0.25, 0, 0);
     Wuerfel_mit_Normalen(0.4);
   glPopMatrix();
 
-  //Unterarm
+  // Unterarm
   glPushMatrix();
     glScalef(1, 0.25, 0);
     glTranslatef(0.65, 0, 0);
