@@ -16,16 +16,15 @@
 
 float fRotation = 315.0;
 
-void Init()
-{
+void Init() {
   // Hier finden jene Aktionen statt, die zum Programmstart einmalig
   // durchgeführt werden müssen
   glEnable(GL_DEPTH_TEST);
   glClearDepth(1.0);
 }
 
-void RenderScene() //Zeichenfunktion
-{
+//Zeichenfunktion
+void RenderScene() {
   // Hintergrundfarbe zurücksetzen
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   // Hintergrundfarbe auf Orange setzen
@@ -56,6 +55,7 @@ void RenderScene() //Zeichenfunktion
     Wuerfel_mit_Normalen(0.4);
   glPopMatrix();
 
+  // Von geradeaus
   gluLookAt(0., 0., 1., 0., 0., 0., 0., 1., 0.);
 
   glFlush(); //Buffer leeren
