@@ -14,6 +14,9 @@ teil_1:
 teil_2:
 	${CC} ${CFLAGS} -I ${INCLUDES} -o ${EXECUTABLE} teil_2.cpp ${SOURCES}
 
+teil_3:
+	${CC} ${CFLAGS} -I ${INCLUDES} -o ${EXECUTABLE} teil_3.cpp ${SOURCES}
+
 run:
 	./${EXECUTABLE}
 

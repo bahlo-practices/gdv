@@ -33,8 +33,8 @@ void RenderScene() //Zeichenfunktion
   glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
 
   // Kamerawinkel ändern
-  gluLookAt ( 1., 1., 0., 0., 0., 0., 0., 1., 0.);
-  //gluPerspective(45., 1., 0.1, 2.0);
+  //gluLookAt ( 1., 1., 0., 0., 0., 0., 0., 1., 0.);
+  gluPerspective(45., 1., 0.1, 2.0);
 
   // Würfel erstellen
   Wuerfel(0.4);
