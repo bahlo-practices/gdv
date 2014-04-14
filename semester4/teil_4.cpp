@@ -14,6 +14,8 @@
 #include "erweiterungen\Wuerfel_mit_Normalen.h"
 #endif
 
+float fRotation = 315.0;
+
 void Init()
 {
   // Hier finden jene Aktionen statt, die zum Programmstart einmalig
@@ -30,9 +32,11 @@ void RenderScene() //Zeichenfunktion
   // Hier befindet sich der Code der in jedem Frame ausgefuehrt werden muss
   glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
 
+  glutWireCube(0.2);
+  glRotatef(fRotation, 0.0f, 0.0f, 1.0f);
+
   //Oberarm
   glPushMatrix();
-    glRotatef(-45.0f, 0.0f, 0.0f, 1.0f);
     glScalef(1,0.5,0);
     glTranslatef(0.25, 0, 0);
     Wuerfel_mit_Normalen(0.4);
@@ -40,7 +44,6 @@ void RenderScene() //Zeichenfunktion
 
   //Unterarm
   glPushMatrix();
-    glRotatef(-45.0f, 0.0f, 0.0f, 1.0f);
     glScalef(1, 0.25, 0);
     glTranslatef(0.65, 0, 0);
     Wuerfel_mit_Normalen(0.4);
@@ -74,6 +77,13 @@ void Animate(int value)
   // 1000 msec aufgerufen. Der Parameter "value" wird einfach nur um eins
   // inkrementiert und dem Callback wieder uebergeben.
   std::cout << "value=" << value << std::endl;
+
+  // Rotate
+  fRotation = fRotation - 1.0;  // Rotationswinkel aendern
+  if (fRotation <= 0.0) {
+     fRotation = fRotation + 360.0;
+  }
+
   // RenderScene aufrufen
   glutPostRedisplay();
   // Timer wieder registrieren; Animate wird so nach 100 msec mit value+=1 aufgerufen
