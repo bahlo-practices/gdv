@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14B6CDB418FB082600C3267A /* teil_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B6CDB318FB082600C3267A /* teil_1.cpp */; };
 		14B6CDB618FB085500C3267A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B6CDB518FB085500C3267A /* OpenGL.framework */; };
 		14B6CDB818FB085B00C3267A /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B6CDB718FB085B00C3267A /* GLUT.framework */; };
+		14B6CDBD18FB412E00C3267A /* Wuerfel_mit_Normalen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B6CDBB18FB412E00C3267A /* Wuerfel_mit_Normalen.cpp */; };
+		14DD2FEA18FBD07100ABD248 /* teil_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B6CDB918FB40A100C3267A /* teil_2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,9 @@
 		14B6CDB318FB082600C3267A /* teil_1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = teil_1.cpp; sourceTree = SOURCE_ROOT; };
 		14B6CDB518FB085500C3267A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		14B6CDB718FB085B00C3267A /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		14B6CDB918FB40A100C3267A /* teil_2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = teil_2.cpp; sourceTree = SOURCE_ROOT; };
+		14B6CDBB18FB412E00C3267A /* Wuerfel_mit_Normalen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Wuerfel_mit_Normalen.cpp; path = erweiterungen/Wuerfel_mit_Normalen.cpp; sourceTree = SOURCE_ROOT; };
+		14B6CDBC18FB412E00C3267A /* Wuerfel_mit_Normalen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Wuerfel_mit_Normalen.h; path = erweiterungen/Wuerfel_mit_Normalen.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +70,19 @@
 			isa = PBXGroup;
 			children = (
 				14B6CDB318FB082600C3267A /* teil_1.cpp */,
+				14B6CDB918FB40A100C3267A /* teil_2.cpp */,
+				14B6CDBE18FB413200C3267A /* erweiterungen */,
 			);
 			path = "opengl-part";
+			sourceTree = "<group>";
+		};
+		14B6CDBE18FB413200C3267A /* erweiterungen */ = {
+			isa = PBXGroup;
+			children = (
+				14B6CDBB18FB412E00C3267A /* Wuerfel_mit_Normalen.cpp */,
+				14B6CDBC18FB412E00C3267A /* Wuerfel_mit_Normalen.h */,
+			);
+			name = erweiterungen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B6CDB418FB082600C3267A /* teil_1.cpp in Sources */,
+				14DD2FEA18FBD07100ABD248 /* teil_2.cpp in Sources */,
+				14B6CDBD18FB412E00C3267A /* Wuerfel_mit_Normalen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

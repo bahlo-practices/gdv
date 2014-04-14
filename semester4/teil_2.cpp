@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <iostream>
+#include "Wuerfel_mit_Normalen.h"
 
 #ifdef __APPLE__
 #include <GLUT/glut.h>
@@ -29,30 +30,15 @@ void RenderScene() //Zeichenfunktion
 	// Hier befindet sich der Code der in jedem Frame ausgefuehrt werden muss
 	glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
     
-	glBegin(GL_POLYGON);
-	//glColor4f(1.0, 0.0, 0.0, 1.0); //ersetzt durch nächste Anweisung
-	glColor4f(1, 0, 0, 0);
-	glVertex3f(-0.5, -0.5, -0.5);
-	glColor4f(0, 0, 1, 0);
-	glVertex3f(0.5, -0.5, -0.5);
-	glColor4f(0, 0, 1, 0);
-	glVertex3f(0.5, 0.5, -0.5);
-	glColor4f(0, 0, 1, 0);
-	glVertex3f(-0.5, 0.5, -0.5);
-	glEnd();
+	//glRotatef(20.0f, 1.0f, 0.0f, 0.0f);
+	//glRotatef(30.0f, 0.0f, 1.0f, 0.0f);
+	//glTranslatef(0.33, 0, 0); //verschieben x,y,z
     
-	//Zweite Fläche
-	glBegin(GL_POLYGON);
-	glColor4f(0., 1., 0., 1);
-	glVertex3f(-0.5, -0.5, -1.);
-	glVertex3f(0.5, -0.5, -1.);
-	glVertex3f(0.5, 0.5, -1.);
-	glVertex3f(-0.5, 0.5, -1.);
-	glEnd();
+	Wuerfel_mit_Normalen(0.4);
     
-	glFlush(); //Buffer leeren
+	gluLookAt(0., 0., 1., 0., 1., 1., 0., 1., 0.);
     
-    
+	//glFlush(); //Buffer leeren
 }
 
 void Reshape(int width, int height)
@@ -66,7 +52,7 @@ void Reshape(int width, int height)
 	// Viewport definieren
 	glViewport(0, 0, width, height);
 	// Frustum definieren (siehe unten)
-	glOrtho(-1., 1., -1., 1., 0.3, 1.3);
+	glOrtho(-1., 1., -1., 1., 0.0, 1.0);
 	// Matrix für Modellierung/Viewing
 	glMatrixMode(GL_MODELVIEW);
 }
@@ -89,7 +75,7 @@ int main(int argc, char **argv)
 	glutInit(&argc, argv);                // GLUT initialisieren
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(600, 600);         // Fenster-Konfiguration
-	glutCreateWindow("Arne Bahlo and Johannes Wahl");   // Fenster-Erzeugung
+	glutCreateWindow("Arne Bahlo; Johannes Wahl");   // Fenster-Erzeugung
     
 	glutDisplayFunc(RenderScene);         // Zeichenfunktion bekannt machen
 	glutReshapeFunc(Reshape);
