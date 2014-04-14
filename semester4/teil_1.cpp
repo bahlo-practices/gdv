@@ -1,6 +1,5 @@
-// GD-Praktikum:   teil_1.cpp  (Teil 1: Start-Programm)
-// Hergenroether / Groch    Last Update: 29.07.2011
-
+// opengleinfuehrung.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
+//
 
 #include <stdlib.h>
 #include <iostream>
@@ -24,51 +23,55 @@ void Init()
 
 void RenderScene() //Zeichenfunktion
 {
-  // Hier befindet sich der Code der in jedem Frame ausgefuehrt werden muss
+  glClearColor(2.5, 0.5, 0, 0);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-  glClearColor( 2.5, 0.5, 0.0, 1.0);
 
-  glLoadIdentity ();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
+  // Hier befindet sich der Code der in jedem Frame ausgefuehrt werden muss
+  glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
 
-  // Draw blue square
-  glBegin( GL_POLYGON );
-    glColor4f( 0.0, 0.0, 1.0, 1.0);
-    glVertex3f( -0.5, -0.5, -0.5 );
-    glVertex3f(  0.5, -0.5, -0.5 );
-    glVertex3f(  0.5,  0.5, -0.5 );
-    glVertex3f( -0.5,  0.5, -0.5 );
+  glBegin(GL_POLYGON);
+  //glColor4f(1.0, 0.0, 0.0, 1.0); //ersetzt durch nächste Anweisung
+  glColor4f(1, 0, 0, 0);
+  glVertex3f(-0.5, -0.5, -0.5);
+  glColor4f(0, 0, 1, 0);
+  glVertex3f(0.5, -0.5, -0.5);
+  glColor4f(0, 0, 1, 0);
+  glVertex3f(0.5, 0.5, -0.5);
+  glColor4f(0, 0, 1, 0);
+  glVertex3f(-0.5, 0.5, -0.5);
   glEnd();
 
-  // Draw orange square
-  glBegin( GL_POLYGON );
-    glColor4f( 0., 1., 0., 1.);
-    glVertex3f( -0.5, -0.5, -1. );
-    glVertex3f(  0.5, -0.5, -1. );
-    glVertex3f(  0.5,  0.5, -1. );
-    glVertex3f( -0.5,  0.5, -1. );
+  //Zweite Fläche
+  glBegin(GL_POLYGON);
+  glColor4f(0., 1., 0., 1);
+  glVertex3f(-0.5, -0.5, -1.);
+  glVertex3f(0.5, -0.5, -1.);
+  glVertex3f(0.5, 0.5, -1.);
+  glVertex3f(-0.5, 0.5, -1.);
   glEnd();
 
   glFlush(); //Buffer leeren
+
+
 }
 
-void Reshape(int width,int height)
+void Reshape(int width, int height)
 {
   // Hier finden die Reaktionen auf eine Veränderung der Größe des
   // Graphikfensters statt
-
-  // Matrix fu¿r Transformation: Frustum->viewport
+  // Matrix für Transformation: Frustum->viewport
   glMatrixMode(GL_PROJECTION);
   // Aktuelle Transformations-Matrix zuruecksetzen
-  glLoadIdentity ();
+  glLoadIdentity();
   // Viewport definieren
-  glViewport(0,0,width,height);
+  glViewport(0, 0, width, height);
   // Frustum definieren (siehe unten)
-  glOrtho( -1., 1., -1., 1., 0.3, 1.3);
-  // Matrix fu¿r Modellierung/Viewing
+  glOrtho(-1., 1., -1., 1., 0.3, 1.3);
+  // Matrix für Modellierung/Viewing
   glMatrixMode(GL_MODELVIEW);
 }
 
-void Animate (int value)
+void Animate(int value)
 {
   // Hier werden Berechnungen durchgeführt, die zu einer Animation der Szene
   // erforderlich sind. Dieser Prozess läuft im Hintergrund und wird alle
@@ -83,14 +86,15 @@ void Animate (int value)
 
 int main(int argc, char **argv)
 {
-  glutInit( &argc, argv );                // GLUT initialisieren
-  glutInitDisplayMode( GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH );
-  glutInitWindowSize( 600, 600 );         // Fenster-Konfiguration
-  glutCreateWindow( "Arne Bahlo; Johannes Wahl" );   // Fenster-Erzeugung
-  glutDisplayFunc( RenderScene );         // Zeichenfunktion bekannt machen
-  glutReshapeFunc( Reshape );
+  glutInit(&argc, argv);                // GLUT initialisieren
+  glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
+  glutInitWindowSize(600, 600);         // Fenster-Konfiguration
+  glutCreateWindow("Arne Bahlo; Johannes Wahl");   // Fenster-Erzeugung
+
+  glutDisplayFunc(RenderScene);         // Zeichenfunktion bekannt machen
+  glutReshapeFunc(Reshape);
   // TimerCallback registrieren; wird nach 10 msec aufgerufen mit Parameter 0
-  glutTimerFunc( 10, Animate, 0);
+  glutTimerFunc(10, Animate, 0);
   Init();
   glutMainLoop();
   return 0;
