@@ -14,4 +14,6 @@
 # Teil 2
 10. Man sieht die Rückseite, weil die Kamera so ausgerichtet ist
 11. a) `gluLookAt ( 0., 1., 1., 0., 0., 0., 0., 1., 0.)`, `gnuOrtho` ist nicht richtig gesetzt, weil wir zu nah dran sind
+    b) `gluLookAt ( 1., 0., 0., 0., 0., 0., 0., 1., 0.)` und `glOrtho( -1., 1., -1., 1., 0.0, 3.0)`
+    c) `gluLookAt ( 1., 1., 0., 0., 0., 0., 0., 1., 0.)`
 
