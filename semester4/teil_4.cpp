@@ -26,27 +26,33 @@ void Init()
 
 void RenderScene() //Zeichenfunktion
 {
-  glClearColor(2.5, 0.5, 0, 0);
+  // Hintergrundfarbe zurücksetzen
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  // Hintergrundfarbe auf Orange setzen
+  glClearColor(2.5, 0.5, 0, 0);
 
   // Hier befindet sich der Code der in jedem Frame ausgefuehrt werden muss
   glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
 
+  // Würfel anzeigen
   glutWireCube(0.2);
-  glTranslatef(0.09, 0.09, 0);
+  // Matrix verschieben, damit sich der Arm um die obere rechte Kante des
+  // Würfels dreht
+  glTranslatef(0.1, 0.1, 0);
+  // Matrix rotieren um fRotation
   glRotatef(fRotation, 0.0f, 0.0f, 1.0f);
 
   // Oberarm
   glPushMatrix();
     glScalef(1,0.5,0);
-    glTranslatef(0.25, 0, 0);
+    glTranslatef(0.2, 0, 0);
     Wuerfel_mit_Normalen(0.4);
   glPopMatrix();
 
   // Unterarm
   glPushMatrix();
     glScalef(1, 0.25, 0);
-    glTranslatef(0.65, 0, 0);
+    glTranslatef(0.6, 0, 0);
     Wuerfel_mit_Normalen(0.4);
   glPopMatrix();
 
