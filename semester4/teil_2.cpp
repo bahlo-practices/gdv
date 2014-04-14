@@ -33,7 +33,7 @@ void RenderScene() //Zeichenfunktion
   glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
 
   // Kamerawinkel ändern
-  gluLookAt ( 0., 0., 1., 0., 0., 0., 0., 1., 0.);
+  gluLookAt ( 0., 1., 1., 0., 0., 0., 0., 1., 0.);
 
   // Würfel erstellen
   Wuerfel(0.4);
@@ -52,7 +52,7 @@ void Reshape(int width, int height)
   // Viewport definieren
   glViewport(0, 0, width, height);
   // Frustum definieren (siehe unten)
-  glOrtho( -1., 1., -1., 1., 0.0, 1.0);
+  glOrtho( -1., 1., -1., 1., 0.0, 3.0);
   // Matrix für Modellierung/Viewing
   glMatrixMode(GL_MODELVIEW);
 }
