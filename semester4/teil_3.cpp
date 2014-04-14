@@ -30,10 +30,10 @@ void RenderScene() //Zeichenfunktion
   // Hier befindet sich der Code der in jedem Frame ausgefuehrt werden muss
   glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
 
-  glRotatef(-45.0f, 0.0f, 0.0f, 1.0f);
 
   //Oberarm
   glPushMatrix();
+    glRotatef(-45.0f, 0.0f, 0.0f, 1.0f);
     glScalef(1,0.5,0);
     glTranslatef(0.25, 0, 0);
     Wuerfel_mit_Normalen(0.4);
@@ -41,6 +41,7 @@ void RenderScene() //Zeichenfunktion
 
   //Unterarm
   glPushMatrix();
+    glRotatef(-45.0f, 0.0f, 0.0f, 1.0f);
     glScalef(1, 0.25, 0);
     glTranslatef(0.65, 0, 0);
     Wuerfel_mit_Normalen(0.4);
