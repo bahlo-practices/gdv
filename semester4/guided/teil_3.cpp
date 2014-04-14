@@ -7,11 +7,11 @@
 #include <GLUT/glut.h>
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
-#include "erweiterungen/Wuerfel_mit_Normalen.h"
+#include "erweiterungen/Wuerfel.h"
 #else
 #include "stdafx.h"
 #include <gl\freeglut.h>
-#include "erweiterungen\Wuerfel_mit_Normalen.h"
+#include "erweiterungen\Wuerfel.h"
 #endif
 
 void Init()
@@ -35,7 +35,7 @@ void RenderScene() //Zeichenfunktion
     glRotatef(-45.0f, 0.0f, 0.0f, 1.0f);
     glScalef(1,0.5,0);
     glTranslatef(0.25, 0, 0);
-    Wuerfel_mit_Normalen(0.4);
+    Wuerfel(0.4);
   glPopMatrix();
 
   //Unterarm
@@ -43,7 +43,7 @@ void RenderScene() //Zeichenfunktion
     glRotatef(-45.0f, 0.0f, 0.0f, 1.0f);
     glScalef(1, 0.25, 0);
     glTranslatef(0.65, 0, 0);
-    Wuerfel_mit_Normalen(0.4);
+    Wuerfel(0.4);
   glPopMatrix();
 
   gluLookAt(0., 0., 1., 0., 0., 0., 0., 1., 0.);

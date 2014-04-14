@@ -7,11 +7,11 @@
 #include <GLUT/glut.h>
 #include <OpenGL/gl.h>
 #include <OpenGL/glu.h>
-#include "erweiterungen/Wuerfel_mit_Normalen.h"
+#include "erweiterungen/Wuerfel.h"
 #else
 #include "stdafx.h"
 #include <gl\freeglut.h>
-#include "erweiterungen\Wuerfel_mit_Normalen.h"
+#include "erweiterungen\Wuerfel.h"
 #endif
 
 float fRotation = 315.0;
@@ -45,24 +45,25 @@ void RenderScene() {
   glPushMatrix();
     glScalef(1,0.5,0);
     glTranslatef(0.2, 0, 0);
-    Wuerfel_mit_Normalen(0.4);
+    Wuerfel(0.4);
   glPopMatrix();
 
   // Unterarm
   glPushMatrix();
     glScalef(1, 0.25, 0);
     glTranslatef(0.6, 0, 0);
-    Wuerfel_mit_Normalen(0.4);
+    Wuerfel(0.4);
   glPopMatrix();
 
   // Von geradeaus
-  gluLookAt(0., 0., 1., 0., 0., 0., 0., 1., 0.);
+  gluLookAt(0., 0., 1.,
+            0., 0., 0.,
+            0., 1., 0.);
 
   glFlush(); //Buffer leeren
 }
 
-void Reshape(int width, int height)
-{
+void Reshape(int width, int height) {
   // Hier finden die Reaktionen auf eine Veränderung der Größe des
   // Graphikfensters statt
   // Matrix für Transformation: Frustum->viewport
@@ -77,8 +78,7 @@ void Reshape(int width, int height)
   glMatrixMode(GL_MODELVIEW);
 }
 
-void Animate(int value)
-{
+void Animate(int value) {
   // Hier werden Berechnungen durchgeführt, die zu einer Animation der Szene
   // erforderlich sind. Dieser Prozess läuft im Hintergrund und wird alle
   // 1000 msec aufgerufen. Der Parameter "value" wird einfach nur um eins
@@ -97,8 +97,7 @@ void Animate(int value)
   glutTimerFunc(100, Animate, ++value);
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
   glutInit(&argc, argv);                // GLUT initialisieren
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
   glutInitWindowSize(600, 600);         // Fenster-Konfiguration
