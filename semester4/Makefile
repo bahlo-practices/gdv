@@ -3,8 +3,7 @@ CC=g++
 CFLAGS=-Wall -framework OpenGL -framework GLUT
 LDFLAGS=
 SOURCES=
-MAIN=teil_1.cpp
-EXECUTABLE=teil_1.o
+EXECUTABLE=main.o
 
 all:
 
@@ -13,6 +12,9 @@ teil_1:
 
 teil_2:
 	${CC} ${CFLAGS} -o ${EXECUTABLE} teil_2.cpp ${SOURCES}
+
+run:
+	./${EXECUTABLE}
 
 clean:
 	rm `find . -name "*o"`

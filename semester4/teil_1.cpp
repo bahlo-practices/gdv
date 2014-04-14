@@ -89,7 +89,7 @@ int main(int argc, char **argv)
   glutInit(&argc, argv);                // GLUT initialisieren
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
   glutInitWindowSize(600, 600);         // Fenster-Konfiguration
-  glutCreateWindow("Arne Bahlo and Johannes Wahl");   // Fenster-Erzeugung
+  glutCreateWindow("Arne Bahlo; Johannes Wahl");   // Fenster-Erzeugung
 
   glutDisplayFunc(RenderScene);         // Zeichenfunktion bekannt machen
   glutReshapeFunc(Reshape);
