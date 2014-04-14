@@ -8,4 +8,6 @@
 6. Die verschiedenen Frames würden sich überlagern
 7. Nur die grüne
 8. Die Fläche, die zuletzt gezeichnet wurde, überlagert alle anderen
+9. a) Ja, wenn man die Fenstergröße verändert, verändert sich auch das View
+   b)
 
