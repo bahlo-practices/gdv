@@ -1,20 +1,27 @@
 #define _USE_MATH_DEFINES
 #define NUM_TEXTURES 1           //Anzahl der Texturen
 
-#include "stdafx.h"
-#include "GL\freeglut.h"
-#include "erweiterungen\Wuerfel_mit_Normalen.h"
-#include "OpenGL_Ergaenzungen\myBitmap.h"
 #include <iostream>
 #include <math.h>
 #include <stdio.h>
 
+#include "erweiterungen/Wuerfel_mit_Normalen.h"
+#include "OpenGL_Ergaenzungen/myBitmap.h"
 
-GLfloat rotate_y = 0;		//alte Lösung: Drehung des Objektes
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#else
+#include "stdafx.h"
+#include "GL\freeglut.h"
+#endif
+
+GLfloat rotate_y = 0;		//alte Lï¿½sung: Drehung des Objektes
 GLfloat rotate_x = 0;
 
-float fRotation = 315; //Wert für Schauckel Schwingung
-float gRotation = 315; //Wert für Rotation des gesamten OBjekts
+float fRotation = 315; //Wert fï¿½r Schauckel Schwingung
+float gRotation = 315; //Wert fï¿½r Rotation des gesamten OBjekts
 
 // angle of rotation for the camera direction
 float angle = 0.0;
@@ -132,7 +139,7 @@ void Schauckel(GLfloat relativ){
 	//Brett
 	glPushMatrix();
 	glScalef(1.5, 0.1, 0.25);
-	glTranslatef(0.17, -1.5, 0.0);	
+	glTranslatef(0.17, -1.5, 0.0);
 	Wuerfel_mit_Normalen(relativ*2/2.5);
 	glPopMatrix();
 
@@ -155,7 +162,7 @@ void Schauckel(GLfloat relativ){
 void Init()
 {
 	LoadGLTextures();            //Texturen Laden
-	// Hier finden jene Aktionen statt, die zum Programmstart einmalig 
+	// Hier finden jene Aktionen statt, die zum Programmstart einmalig
 	// durchgefuehrt werden muessen
 	glClearColor(0.33f, 0.225f, 0.0f, 1.0f);	// Hintergrundfarbe definieren
 	// Licht
@@ -202,7 +209,7 @@ void KeyboardFunc(int key, int x, int y)
 		rotate_y += 5;
 		std::cout << "Rechte TASTE!";
 	}
-		
+
 	//  Left arrow - decrease rotation by 5 degree
 	else if (key == GLUT_KEY_LEFT)
 		rotate_y -= 5;
@@ -226,11 +233,11 @@ void RenderScene() //Zeichenfunktion
 	// Hier befindet sich der Code der in jedem Frame ausgefuehrt werden muss
 	glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
 
-	glRotatef(rotate_x, 1.0, 0.0, 0.0);  //alte Lösung: Drehung des Objektes
+	glRotatef(rotate_x, 1.0, 0.0, 0.0);  //alte Lï¿½sung: Drehung des Objektes
 	glRotatef(rotate_y, 0.0, 1.0, 0.0);
 
 	//gluLookAt(x, 0.0f, z, x + lx, 0.0f, z + lz, 0.0f, 1.0f, 0.0f);
-	
+
 	glPushMatrix();
 	Wuerfel_mit_Normalen(5);
 	glPopMatrix();
@@ -257,9 +264,9 @@ void RenderScene() //Zeichenfunktion
 
 void Reshape(int width, int height)
 {
-	// Hier finden die Reaktionen auf eine Veränderung der Größe des 
+	// Hier finden die Reaktionen auf eine Verï¿½nderung der Grï¿½ï¿½e des
 	// Graphikfensters statt
- 	// Matrix für Transformation: Frustum->viewport
+ 	// Matrix fï¿½r Transformation: Frustum->viewport
 	glMatrixMode(GL_PROJECTION);
 	// Aktuelle Transformations-Matrix zuruecksetzen
 	glLoadIdentity();
@@ -267,16 +274,16 @@ void Reshape(int width, int height)
 	glViewport(0, 0, width, height);
 	// Frustum definieren (siehe unten)
 	glOrtho(-1., 1., -1., 1., -2, 10.0);
-	// Matrix für Modellierung/Viewing
+	// Matrix fï¿½r Modellierung/Viewing
 	glMatrixMode(GL_MODELVIEW);
 }
 
 void Animate(int value)
 {
-	// Hier werden Berechnungen durchgeführt, die zu einer Animation der Szene  
-	// erforderlich sind. Dieser Prozess läuft im Hintergrund und wird alle 
-	// 1000 msec aufgerufen. Der Parameter "value" wird einfach nur um eins 
-	// inkrementiert und dem Callback wieder uebergeben. 
+	// Hier werden Berechnungen durchgefï¿½hrt, die zu einer Animation der Szene
+	// erforderlich sind. Dieser Prozess lï¿½uft im Hintergrund und wird alle
+	// 1000 msec aufgerufen. Der Parameter "value" wird einfach nur um eins
+	// inkrementiert und dem Callback wieder uebergeben.
 	//std::cout << "value=" << value << std::endl;
 	// RenderScene aufrufen
 
@@ -302,12 +309,9 @@ int main(int argc, char **argv)
 	glutReshapeFunc(Reshape);
 	glutSpecialFunc(KeyboardFunc);
 
-	// TimerCallback registrieren; wird nach 10 msec aufgerufen mit Parameter 0  
+	// TimerCallback registrieren; wird nach 10 msec aufgerufen mit Parameter 0
 	glutTimerFunc(10, Animate, 0);
 	Init();
 	glutMainLoop();
 	return 0;
 }
-
-
-

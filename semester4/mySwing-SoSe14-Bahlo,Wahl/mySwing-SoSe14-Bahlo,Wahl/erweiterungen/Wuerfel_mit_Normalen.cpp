@@ -3,12 +3,18 @@
 /* Autor: W.-D. Groch                                          */
 /* letzte Aenderung:	Groch   13.10.2011                        */
 /* ----------------------------------------------------------- */
+
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
 #include <GL/freeglut.h>
+#endif
+
 #include "Wuerfel_mit_Normalen.h"
 
 
-void Wuerfel_mit_Normalen(GLfloat fSeitenL)
-{ 
+void Wuerfel_mit_Normalen(float fSeitenL)
+{
 	glBegin(GL_POLYGON);   //Vorderseite
         glNormal3f(0.0f, 0.0f, 1.0f);
 	    glColor4f(1.0f,0.0f,0.0f,1.0f);	//ROT
@@ -54,7 +60,7 @@ void Wuerfel_mit_Normalen(GLfloat fSeitenL)
 	    glVertex3f(-fSeitenL/2.0f,+fSeitenL/2.0f,-fSeitenL/2.0f);
 	    glColor4f(0.0f,0.0f,0.0f,1.0f); //SCHWARZ
 	    glVertex3f(-fSeitenL/2.0f,-fSeitenL/2.0f,-fSeitenL/2.0f);
-	    glColor4f(1.0f,0.0f,0.0f,1.0f); //ROT	
+	    glColor4f(1.0f,0.0f,0.0f,1.0f); //ROT
 	    glVertex3f(-fSeitenL/2.0f,-fSeitenL/2.0f,+fSeitenL/2.0f);
 	    glColor4f(1.0f,0.0f,1.0f,1.0f); //MAGENTA
 	    glVertex3f(-fSeitenL/2.0f,+fSeitenL/2.0f,+fSeitenL/2.0f);
