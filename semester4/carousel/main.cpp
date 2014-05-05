@@ -24,16 +24,17 @@ void RenderScene() {
   glLoadIdentity();
 
   // Define camera
-  gluLookAt(1., -1., -1.,
-            0., 0., 0.,
-            0., 1., 0.);
+  gluLookAt( 1., -1., -1.,
+             0.,  0.,  0.,
+             0.,  1.,  0.);
 
   // Display wirecube
   glutWireCube(0.2);
 
+  // White ground
   glPushMatrix();
-    // Draw ground
     float size = 1.5f;
+    // Draw ground
     glBegin(GL_POLYGON);
       glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
       glVertex3f(-size / 2.0f, -size / 2.0f, -size / 2.0f);
@@ -43,6 +44,7 @@ void RenderScene() {
     glEnd();
   glPopMatrix();
 
+  // Magenta wall
   glPushMatrix();
     glBegin(GL_POLYGON);
       glColor4f(1.0f, 0.0f, 1.0f, 1.0f);
