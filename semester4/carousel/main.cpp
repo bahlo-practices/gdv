@@ -23,24 +23,31 @@ void RenderScene() {
   // Reset matrix
   glLoadIdentity();
 
-  glPushMatrix();
-    glScalef(1,0.5,0);
-    glTranslatef(0.2, 0, 0);
+  // Display wirecube
+  glutWireCube(0.2);
 
+  glPushMatrix();
     // Draw ground
-    float size = 4.0f;
+    float size = 1.0f;
     glBegin(GL_POLYGON);
       glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-
       glVertex3f(-size/2.0f,-size/2.0f,-size/2.0f);
       glVertex3f(+size/2.0f,-size/2.0f,-size/2.0f);
       glVertex3f(+size/2.0f,-size/2.0f,+size/2.0f);
       glVertex3f(-size/2.0f,-size/2.0f,+size/2.0f);
     glEnd();
+
+    glBegin(GL_POLYGON);
+      glColor4f(1.0f,0.0f,1.0f,1.0f);
+      glVertex3f(+size/2.0f,+size/2.0f,-size/2.0f);
+      glVertex3f(+size/2.0f,-size/2.0f,-size/2.0f);
+      glVertex3f(-size/2.0f,-size/2.0f,-size/2.0f);
+      glVertex3f(-size/2.0f,+size/2.0f,-size/2.0f);
+    glEnd();
   glPopMatrix();
 
   // Define camera
-  gluLookAt(0., 0., 1.,
+  gluLookAt(1., 1., 1.,
             0., 0., 0.,
             0., 1., 0.);
 
@@ -55,7 +62,7 @@ void Reshape(int width, int height) {
   glLoadIdentity();
 
   glViewport(0, 0, width, height);
-  glOrtho( -1., 1., -1., 1., 0.0, 1.0);
+  // glOrtho( -1., 1., -1., 1., 0.0, 1.0);
   glMatrixMode(GL_MODELVIEW);
 }
 
@@ -74,7 +81,9 @@ int main(int argc, char **argv) {
   glutDisplayFunc(RenderScene);
   glutReshapeFunc(Reshape);
   glutTimerFunc(10, Animate, 0);
+
   Init();
   glutMainLoop();
+  
   return 0;
 }
