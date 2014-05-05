@@ -23,6 +23,11 @@ void RenderScene() {
   // Reset matrix
   glLoadIdentity();
 
+  // Define camera
+  gluLookAt(1., -1., 0.,
+            0., 0., 0.,
+            0., 1., 0.);
+
   // Display wirecube
   glutWireCube(0.2);
 
@@ -31,27 +36,22 @@ void RenderScene() {
     float size = 1.0f;
     glBegin(GL_POLYGON);
       glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-      glVertex3f(-size/2.0f,-size/2.0f,-size/2.0f);
-      glVertex3f(+size/2.0f,-size/2.0f,-size/2.0f);
-      glVertex3f(+size/2.0f,-size/2.0f,+size/2.0f);
-      glVertex3f(-size/2.0f,-size/2.0f,+size/2.0f);
+      glVertex3f(-size / 2.0f, -size / 2.0f, -size / 2.0f);
+      glVertex3f(+size / 2.0f, -size / 2.0f, -size / 2.0f);
+      glVertex3f(+size / 2.0f, -size / 2.0f, +size / 2.0f);
+      glVertex3f(-size / 2.0f, -size / 2.0f, +size / 2.0f);
     glEnd();
   glPopMatrix();
 
   glPushMatrix();
     glBegin(GL_POLYGON);
-      glColor4f(1.0f,0.0f,1.0f,1.0f);
-      glVertex3f(+size/2.0f,+size/2.0f,-size/2.0f);
-      glVertex3f(+size/2.0f,-size/2.0f,-size/2.0f);
-      glVertex3f(-size/2.0f,-size/2.0f,-size/2.0f);
-      glVertex3f(-size/2.0f,+size/2.0f,-size/2.0f);
+      glColor4f(1.0f, 0.0f, 1.0f, 1.0f);
+      glVertex3f(+size / 2.0f, +size / 2.0f, -size / 2.0f);
+      glVertex3f(+size / 2.0f, -size / 2.0f, -size / 2.0f);
+      glVertex3f(-size / 2.0f, -size / 2.0f, -size / 2.0f);
+      glVertex3f(-size / 2.0f, +size / 2.0f, -size / 2.0f);
     glEnd();
   glPopMatrix();
-
-  // Define camera
-  gluLookAt(1., 1., 1.,
-            0., 0., 0.,
-            0., 1., 0.);
 
   // Empty buffer
   glFlush();
