@@ -23,6 +23,27 @@ void RenderScene() {
   // Reset matrix
   glLoadIdentity();
 
+  glPushMatrix();
+    glScalef(1,0.5,0);
+    glTranslatef(0.2, 0, 0);
+
+    // Draw ground
+    float size = 4.0f;
+    glBegin(GL_POLYGON);
+      glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+
+      glVertex3f(-size/2.0f,-size/2.0f,-size/2.0f);
+      glVertex3f(+size/2.0f,-size/2.0f,-size/2.0f);
+      glVertex3f(+size/2.0f,-size/2.0f,+size/2.0f);
+      glVertex3f(-size/2.0f,-size/2.0f,+size/2.0f);
+    glEnd();
+  glPopMatrix();
+
+  // Define camera
+  gluLookAt(0., 0., 1.,
+            0., 0., 0.,
+            0., 1., 0.);
+
   // Empty buffer
   glFlush();
 }
@@ -41,7 +62,7 @@ void Reshape(int width, int height) {
 int main(int argc, char **argv) {
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
-  glutInitWindowSize(1024, 768);
+  glutInitWindowSize(600, 600);
   glutCreateWindow("Carousel");
 
   glutDisplayFunc(RenderScene);

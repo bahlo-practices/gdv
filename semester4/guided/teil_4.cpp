@@ -1,4 +1,4 @@
-// opengleinfuehrung.cpp : Definiert den Einstiegspunkt für die Konsolenanwendung.
+// opengleinfuehrung.cpp : Definiert den Einstiegspunkt fï¿½r die Konsolenanwendung.
 //
 
 #include <iostream>
@@ -18,14 +18,14 @@ float fRotation = 315.0;
 
 void Init() {
   // Hier finden jene Aktionen statt, die zum Programmstart einmalig
-  // durchgeführt werden müssen
+  // durchgefï¿½hrt werden mï¿½ssen
   glEnable(GL_DEPTH_TEST);
   glClearDepth(1.0);
 }
 
 //Zeichenfunktion
 void RenderScene() {
-  // Hintergrundfarbe zurücksetzen
+  // Hintergrundfarbe zurï¿½cksetzen
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   // Hintergrundfarbe auf Orange setzen
   glClearColor(2.5, 0.5, 0, 0);
@@ -33,10 +33,10 @@ void RenderScene() {
   // Hier befindet sich der Code der in jedem Frame ausgefuehrt werden muss
   glLoadIdentity();   // Aktuelle Model-/View-Transformations-Matrix zuruecksetzen
 
-  // Würfel anzeigen
+  // Wï¿½rfel anzeigen
   glutWireCube(0.2);
   // Matrix verschieben, damit sich der Arm um die obere rechte Kante des
-  // Würfels dreht
+  // Wï¿½rfels dreht
   glTranslatef(0.1, 0.1, 0);
   // Matrix rotieren um fRotation
   glRotatef(fRotation, 0.0f, 0.0f, 1.0f);
@@ -64,9 +64,9 @@ void RenderScene() {
 }
 
 void Reshape(int width, int height) {
-  // Hier finden die Reaktionen auf eine Veränderung der Größe des
+  // Hier finden die Reaktionen auf eine Verï¿½nderung der Grï¿½ï¿½e des
   // Graphikfensters statt
-  // Matrix für Transformation: Frustum->viewport
+  // Matrix fï¿½r Transformation: Frustum->viewport
   glMatrixMode(GL_PROJECTION);
   // Aktuelle Transformations-Matrix zuruecksetzen
   glLoadIdentity();
@@ -74,13 +74,13 @@ void Reshape(int width, int height) {
   glViewport(0, 0, width, height);
   // Frustum definieren (siehe unten)
   glOrtho( -1., 1., -1., 1., 0.0, 1.0);
-  // Matrix für Modellierung/Viewing
+  // Matrix fï¿½r Modellierung/Viewing
   glMatrixMode(GL_MODELVIEW);
 }
 
 void Animate(int value) {
-  // Hier werden Berechnungen durchgeführt, die zu einer Animation der Szene
-  // erforderlich sind. Dieser Prozess läuft im Hintergrund und wird alle
+  // Hier werden Berechnungen durchgefï¿½hrt, die zu einer Animation der Szene
+  // erforderlich sind. Dieser Prozess lï¿½uft im Hintergrund und wird alle
   // 1000 msec aufgerufen. Der Parameter "value" wird einfach nur um eins
   // inkrementiert und dem Callback wieder uebergeben.
   std::cout << "value=" << value << std::endl;
@@ -111,4 +111,3 @@ int main(int argc, char **argv) {
   glutMainLoop();
   return 0;
 }
-
