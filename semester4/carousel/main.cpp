@@ -36,7 +36,9 @@ void RenderScene() {
       glVertex3f(+size/2.0f,-size/2.0f,+size/2.0f);
       glVertex3f(-size/2.0f,-size/2.0f,+size/2.0f);
     glEnd();
+  glPopMatrix();
 
+  glPushMatrix();
     glBegin(GL_POLYGON);
       glColor4f(1.0f,0.0f,1.0f,1.0f);
       glVertex3f(+size/2.0f,+size/2.0f,-size/2.0f);
@@ -84,6 +86,6 @@ int main(int argc, char **argv) {
 
   Init();
   glutMainLoop();
-  
+
   return 0;
 }
