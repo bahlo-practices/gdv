@@ -86,7 +86,7 @@ static void LoadGLTextures()     //Bitmaps laden und in Texturen umwandeln
 	}
 	//memset(textureImage,0,sizeof(void *)*1); //sicherheitshalber den Inhalt loeschen
 	if (
-		LoadBMP("waldboden.bmp", textureImage[0]))  {
+		LoadBMP("grass.bmp", textureImage[0]))  {
 
 		for (i = 0; i<NUM_TEXTURES; i++) {
 			glGenTextures(1, &texture[i]);  //Textur erzeugen
@@ -155,7 +155,7 @@ void Schaukel(GLfloat relativ){
 	//Brett
 	glPushMatrix();
 	glScalef(1.5, 0.1, 0.25);
-	glTranslatef(0.17, -1.5, 0.0);
+	glTranslatef(0.17, -5.0f, 0.0);
 	Wuerfel_mit_Normalen(relativ*2/2.5);
 	glPopMatrix();
 
