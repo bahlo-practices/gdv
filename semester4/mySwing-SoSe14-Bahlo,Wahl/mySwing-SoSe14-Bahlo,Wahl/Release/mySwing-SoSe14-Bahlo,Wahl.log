@@ -1,0 +1,55 @@
+﻿Der Buildvorgang wurde am 05.05.2014 16:32:13 gestartet.
+     1>Projekt "C:\Users\Johannes\Documents\GitHub\gdv\semester4\mySwing-SoSe14-Bahlo,Wahl\mySwing-SoSe14-Bahlo,Wahl\mySwing-SoSe14-Bahlo,Wahl.vcxproj" auf Knoten "2", Build Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt erweiterungen\Wuerfel_mit_Normalen.cpp "mySwing-SoSe14-Bahlo,Wahl.cpp" OpenGL_Ergaenzungen\Texture.cpp stdafx.cpp
+         Wuerfel_mit_Normalen.cpp
+         mySwing-SoSe14-Bahlo,Wahl.cpp
+     1>c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\OpenGL_Ergaenzungen/myBitmap.h(77): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211): Siehe Deklaration von 'fopen'
+     1>c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\OpenGL_Ergaenzungen/myBitmap.h(154): warning C4018: '<': Konflikt zwischen 'signed' und 'unsigned'
+     1>c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\OpenGL_Ergaenzungen/myBitmap.h(202): warning C4018: '<': Konflikt zwischen 'signed' und 'unsigned'
+     1>C:\Program Files (x86)\Windows Kits\8.1\Include\um\wingdi.h(897): warning C4005: 'BI_RGB': Makro-Neudefinition
+                 c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\OpenGL_Ergaenzungen/myBitmap.h(52): Siehe vorherige Definition von 'BI_RGB'
+     1>C:\Program Files (x86)\Windows Kits\8.1\Include\um\wingdi.h(898): warning C4005: 'BI_RLE8': Makro-Neudefinition
+                 c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\OpenGL_Ergaenzungen/myBitmap.h(53): Siehe vorherige Definition von 'BI_RLE8'
+     1>C:\Program Files (x86)\Windows Kits\8.1\Include\um\wingdi.h(899): warning C4005: 'BI_RLE4': Makro-Neudefinition
+                 c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\OpenGL_Ergaenzungen/myBitmap.h(54): Siehe vorherige Definition von 'BI_RLE4'
+     1>mySwing-SoSe14-Bahlo,Wahl.cpp(139): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
+     1>mySwing-SoSe14-Bahlo,Wahl.cpp(146): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
+     1>mySwing-SoSe14-Bahlo,Wahl.cpp(153): warning C4244: 'Argument': Konvertierung von 'double' in 'GLfloat', möglicher Datenverlust
+     1>mySwing-SoSe14-Bahlo,Wahl.cpp(158): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
+     1>mySwing-SoSe14-Bahlo,Wahl.cpp(159): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
+     1>mySwing-SoSe14-Bahlo,Wahl.cpp(160): warning C4244: 'Argument': Konvertierung von 'double' in 'float', möglicher Datenverlust
+     1>mySwing-SoSe14-Bahlo,Wahl.cpp(308): warning C4244: '=': Konvertierung von 'double' in 'float', möglicher Datenverlust
+     1>mySwing-SoSe14-Bahlo,Wahl.cpp(310): warning C4244: '=': Konvertierung von 'double' in 'float', möglicher Datenverlust
+         Texture.cpp
+     1>c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\opengl_ergaenzungen\myBitmap.h(52): warning C4005: 'BI_RGB': Makro-Neudefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\wingdi.h(897): Siehe vorherige Definition von 'BI_RGB'
+     1>c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\opengl_ergaenzungen\myBitmap.h(53): warning C4005: 'BI_RLE8': Makro-Neudefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\wingdi.h(898): Siehe vorherige Definition von 'BI_RLE8'
+     1>c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\opengl_ergaenzungen\myBitmap.h(54): warning C4005: 'BI_RLE4': Makro-Neudefinition
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\wingdi.h(899): Siehe vorherige Definition von 'BI_RLE4'
+     1>c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\opengl_ergaenzungen\myBitmap.h(77): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211): Siehe Deklaration von 'fopen'
+     1>c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\opengl_ergaenzungen\myBitmap.h(154): warning C4018: '<': Konflikt zwischen 'signed' und 'unsigned'
+     1>c:\users\johannes\documents\github\gdv\semester4\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\opengl_ergaenzungen\myBitmap.h(202): warning C4018: '<': Konflikt zwischen 'signed' und 'unsigned'
+     1>OpenGL_Ergaenzungen\Texture.cpp(112): warning C4305: '-=': Verkürzung von 'double' in 'GLfloat'
+     1>OpenGL_Ergaenzungen\Texture.cpp(113): warning C4305: '+=': Verkürzung von 'double' in 'GLfloat'
+         stdafx.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Johannes\Documents\GitHub\gdv\semester4\mySwing-SoSe14-Bahlo,Wahl\Release\mySwing-SoSe14-Bahlo,Wahl.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Johannes\Documents\GitHub\gdv\semester4\mySwing-SoSe14-Bahlo,Wahl\Release\mySwing-SoSe14-Bahlo,Wahl.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Johannes\Documents\GitHub\gdv\semester4\mySwing-SoSe14-Bahlo,Wahl\Release\mySwing-SoSe14-Bahlo,Wahl.lib" /MACHINE:X86 /SAFESEH Release\Wuerfel_mit_Normalen.obj
+         "Release\mySwing-SoSe14-Bahlo,Wahl.obj"
+         Release\Texture.obj
+         Release\stdafx.obj
+     1>Texture.obj : error LNK2005: "unsigned int filterMode" (?filterMode@@3IA) ist bereits in mySwing-SoSe14-Bahlo,Wahl.obj definiert.
+     1>Texture.obj : error LNK2005: "unsigned int * texture" (?texture@@3PAIA) ist bereits in mySwing-SoSe14-Bahlo,Wahl.obj definiert.
+     1>Texture.obj : error LNK2005: "unsigned int texNum" (?texNum@@3IA) ist bereits in mySwing-SoSe14-Bahlo,Wahl.obj definiert.
+     1>Texture.obj : error LNK2005: "float angle" (?angle@@3MA) ist bereits in mySwing-SoSe14-Bahlo,Wahl.obj definiert.
+     1>Texture.obj : error LNK2005: _main ist bereits in mySwing-SoSe14-Bahlo,Wahl.obj definiert.
+     1>Texture.obj : error LNK2005: "int __cdecl LoadBMP(char *,struct myRGBImage *)" (?LoadBMP@@YAHPADPAUmyRGBImage@@@Z) ist bereits in mySwing-SoSe14-Bahlo,Wahl.obj definiert.
+     1>C:\Users\Johannes\Documents\GitHub\gdv\semester4\mySwing-SoSe14-Bahlo,Wahl\Release\mySwing-SoSe14-Bahlo,Wahl.exe : fatal error LNK1169: Mindestens ein mehrfach definiertes Symbol gefunden.
+     1>Die Erstellung des Projekts "C:\Users\Johannes\Documents\GitHub\gdv\semester4\mySwing-SoSe14-Bahlo,Wahl\mySwing-SoSe14-Bahlo,Wahl\mySwing-SoSe14-Bahlo,Wahl.vcxproj" ist abgeschlossen, Build Ziel(e) -- FEHLER.
+
+Fehler beim Buildvorgang.
+
+Verstrichene Zeit 00:00:02.37
