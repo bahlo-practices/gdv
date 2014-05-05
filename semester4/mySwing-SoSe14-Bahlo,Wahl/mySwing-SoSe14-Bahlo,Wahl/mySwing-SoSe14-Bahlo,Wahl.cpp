@@ -34,18 +34,34 @@ void ZeichneUmwelt(GLfloat relativ){
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filterMode);
 
 	glBegin(GL_QUADS);
-	// Textur aus einem Bild
-	glNormal3f(0.0, 0.0, 1.0);
-	glTexCoord2f(0.0, 0.0); glVertex3f(-2.0, -2.0, 0.0);
-	glTexCoord2f(1.0, 0.0); glVertex3f(2.0, -2.0, 0.0);
-	glTexCoord2f(1.0, 1.0); glVertex3f(2.0, 2.0, 0.0);
-	glTexCoord2f(0.0, 1.0); glVertex3f(-2.0, 2.0, 0.0);
-	// Alternativ dieser Block: Textur aus 2*2 Bildern
-	// glTexCoord2f(0.0, 0.0); glVertex3f(-2.0, -2.0, 0.0);
-	// glTexCoord2f(2.0, 0.0); glVertex3f( 2.0, -2.0, 0.0);
-	// glTexCoord2f(2.0, 2.0); glVertex3f( 2.0,  2.0, 0.0);
-	// glTexCoord2f(0.0, 2.0); glVertex3f(-2.0,  2.0, 0.0);
+	 //Textur aus einem Bild
+	glNormal3f(0.0, -1.0, 0.0);
+	glTexCoord2f(0.0, 0.0); glVertex3f(-2.0, -2.0, -1.0);
+	glTexCoord2f(1.0, 0.0); glVertex3f(2.0, -2.0, -1.0);
+	glTexCoord2f(1.0, 1.0); glVertex3f(2.0, -2.0, 1.0);
+	glTexCoord2f(0.0, 1.0); glVertex3f(-2.0, -2.0, 1.0);
+	 ////Alternativ dieser Block: Textur aus 2*2 Bildern
+	 ////glTexCoord2f(0.0, 0.0); glVertex3f(-2.0, -2.0, 0.0);
+	 ////glTexCoord2f(2.0, 0.0); glVertex3f( 2.0, -2.0, 0.0);
+	 ////glTexCoord2f(2.0, 2.0); glVertex3f( 2.0,  2.0, 0.0);
+	 ////glTexCoord2f(0.0, 2.0); glVertex3f(-2.0,  2.0, 0.0);
 	glEnd();
+
+	//glBegin(GL_POLYGON);   //Bodenflaeche
+	//glNormal3f(0.0f, -1.0f, 0.0f);
+	//glTexCoord2f(0.0, 0.0);
+	//glVertex3f(-relativ / 2.0f, -relativ / 2.0f, -relativ / 2.0f);
+	//glTexCoord2f(1.0, 0.0);
+	//glVertex3f(+relativ / 2.0f, -relativ / 2.0f, -relativ / 2.0f);
+	//glTexCoord2f(1.0, 1.0);
+	//glVertex3f(+relativ / 2.0f, -relativ / 2.0f, +relativ / 2.0f);
+	//glTexCoord2f(0.0, 1.0);
+	//glVertex3f(-relativ / 2.0f, -relativ / 2.0f, +relativ / 2.0f);
+	//glEnd();
+
+
+
+
 	glFlush();
 	glDisable(GL_TEXTURE_2D);
 }
@@ -231,10 +247,11 @@ void RenderScene() //Zeichenfunktion
 
 	//gluLookAt(x, 0.0f, z, x + lx, 0.0f, z + lz, 0.0f, 1.0f, 0.0f);
 	
-	glPushMatrix();
-	Wuerfel_mit_Normalen(5);
-	glPopMatrix();
 
+	glPushMatrix();
+	//Wuerfel_mit_Normalen(5);
+	ZeichneUmwelt(relativ*10);
+	glPopMatrix();
 
 	//Zur Orientierung im Urpsrung
 	glPushMatrix();
@@ -243,7 +260,7 @@ void RenderScene() //Zeichenfunktion
 
 	glRotatef(gRotation, 0, 1, 0);
 
-	glTranslatef(0.5, 0, 0);
+	glTranslatef(0.5, 1, 0); //Verschiebe schauckel und gerüst in koordinatenursprung
 
 	Geruest(relativ);
 

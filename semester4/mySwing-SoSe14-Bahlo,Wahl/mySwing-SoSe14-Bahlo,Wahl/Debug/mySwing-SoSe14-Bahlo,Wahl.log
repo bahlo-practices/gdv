@@ -1,4 +1,4 @@
-﻿Der Buildvorgang wurde am 05.05.2014 15:54:39 gestartet.
+﻿Der Buildvorgang wurde am 05.05.2014 16:16:39 gestartet.
      1>Projekt "C:\Users\Johannes\documents\visual studio 2013\Projects\mySwing-SoSe14-Bahlo,Wahl\mySwing-SoSe14-Bahlo,Wahl\mySwing-SoSe14-Bahlo,Wahl.vcxproj" auf Knoten "2", Build Ziel(e).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "mySwing-SoSe14-Bahlo,Wahl.cpp"
@@ -13,14 +13,14 @@
                  c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211): Siehe Deklaration von 'fopen'
      1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\opengl_ergaenzungen\mybitmap.h(154): warning C4018: '<': Konflikt zwischen 'signed' und 'unsigned'
      1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\opengl_ergaenzungen\mybitmap.h(202): warning C4018: '<': Konflikt zwischen 'signed' und 'unsigned'
-     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(115): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
-     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(122): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
-     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(129): warning C4244: 'Argument': Konvertierung von 'double' in 'GLfloat', möglicher Datenverlust
-     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(134): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
-     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(135): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
-     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(136): warning C4244: 'Argument': Konvertierung von 'double' in 'GLfloat', möglicher Datenverlust
-     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(284): warning C4244: '=': Konvertierung von 'double' in 'float', möglicher Datenverlust
-     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(286): warning C4244: '=': Konvertierung von 'double' in 'float', möglicher Datenverlust
+     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(131): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
+     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(138): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
+     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(145): warning C4244: 'Argument': Konvertierung von 'double' in 'GLfloat', möglicher Datenverlust
+     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(150): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
+     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(151): warning C4305: 'Argument': Verkürzung von 'double' in 'GLfloat'
+     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(152): warning C4244: 'Argument': Konvertierung von 'double' in 'GLfloat', möglicher Datenverlust
+     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(301): warning C4244: '=': Konvertierung von 'double' in 'float', möglicher Datenverlust
+     1>c:\users\johannes\documents\visual studio 2013\projects\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl\myswing-sose14-bahlo,wahl.cpp(303): warning C4244: '=': Konvertierung von 'double' in 'float', möglicher Datenverlust
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Johannes\documents\visual studio 2013\Projects\mySwing-SoSe14-Bahlo,Wahl\Debug\mySwing-SoSe14-Bahlo,Wahl.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Johannes\documents\visual studio 2013\Projects\mySwing-SoSe14-Bahlo,Wahl\Debug\mySwing-SoSe14-Bahlo,Wahl.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Johannes\documents\visual studio 2013\Projects\mySwing-SoSe14-Bahlo,Wahl\Debug\mySwing-SoSe14-Bahlo,Wahl.lib" /MACHINE:X86 Debug\Wuerfel_mit_Normalen.obj
          Debug\stdafx.obj
@@ -30,4 +30,4 @@
 
 Build erfolgreich.
 
-Verstrichene Zeit 00:00:01.56
+Verstrichene Zeit 00:00:01.58
