@@ -20,7 +20,7 @@
 GLfloat rotate_y = 0;		//alte Lï¿½sung: Drehung des Objektes
 GLfloat rotate_x = 0;
 
-float fRotation = 315; //Wert fï¿½r Schauckel Schwingung
+float fRotation = 315; //Wert fï¿½r Schaukel Schwingung
 float gRotation = 315; //Wert fï¿½r Rotation des gesamten OBjekts
 
 // angle of rotation for the camera direction
@@ -133,7 +133,7 @@ void Geruest(GLfloat relativ){
 	glPopMatrix();
 }
 
-void Schauckel(GLfloat relativ){
+void Schaukel(GLfloat relativ){
 
 	glRotatef(90 * sin(fRotation / 360 * 2 * M_PI), 1.0, 0.0, 0.0);
 	glTranslatef(0.0, -0.5, 0.0);
@@ -252,11 +252,11 @@ void RenderScene() //Zeichenfunktion
 
 	glRotatef(gRotation, 0, 1, 0);
 
-	glTranslatef(0.5, 1, 0); //Verschiebe schauckel und gerüst in koordinatenursprung
+	glTranslatef(0.5, 1, 0); //Verschiebe schauckel und gerï¿½st in koordinatenursprung
 
 	Geruest(relativ);
 
-	Schauckel(relativ);
+	Schaukel(relativ);
 
 	glFlush(); //Buffer leeren
 	glutSwapBuffers();
