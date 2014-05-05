@@ -18,7 +18,7 @@ void Init() {
 void RenderScene() {
   // Set background
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-  glClearColor(2.5, 0.5, 0, 0);
+  glClearColor(0, 0, 1., 0);
 
   // Reset matrix
   glLoadIdentity();
@@ -59,6 +59,12 @@ void Reshape(int width, int height) {
   glMatrixMode(GL_MODELVIEW);
 }
 
+void Animate(int value) {
+  glutPostRedisplay();
+
+  glutTimerFunc(100, Animate, ++value);
+}
+
 int main(int argc, char **argv) {
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
@@ -67,6 +73,7 @@ int main(int argc, char **argv) {
 
   glutDisplayFunc(RenderScene);
   glutReshapeFunc(Reshape);
+  glutTimerFunc(10, Animate, 0);
   Init();
   glutMainLoop();
   return 0;
