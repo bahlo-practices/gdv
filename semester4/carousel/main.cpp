@@ -10,7 +10,43 @@
 #include <gl\freeglut.h>
 #endif
 
+void Init() {
+  glEnable(GL_DEPTH_TEST);
+  glClearDepth(1.0);
+}
+
+void RenderScene() {
+  // Set background
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+  glClearColor(2.5, 0.5, 0, 0);
+
+  // Reset matrix
+  glLoadIdentity();
+
+  // Empty buffer
+  glFlush();
+}
+
+void Reshape(int width, int height) {
+  glMatrixMode(GL_PROJECTION);
+
+  // Reset matrix
+  glLoadIdentity();
+
+  glViewport(0, 0, width, height);
+  glOrtho( -1., 1., -1., 1., 0.0, 1.0);
+  glMatrixMode(GL_MODELVIEW);
+}
 
 int main(int argc, char **argv) {
-  
+  glutInit(&argc, argv);
+  glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
+  glutInitWindowSize(1024, 768);
+  glutCreateWindow("Carousel");
+
+  glutDisplayFunc(RenderScene);
+  glutReshapeFunc(Reshape);
+  Init();
+  glutMainLoop();
+  return 0;
 }
