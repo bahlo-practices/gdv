@@ -1,1 +1,1 @@
-void Wuerfel_mit_Normalen ( GLfloat fSeitenL );
+void Wuerfel_mit_Normalen ( float fSeitenL );

@@ -1,13 +1,18 @@
 /*
-    wuerfel.cpp definiert einen Würfel über seine 6 Seiten
+    wuerfel.cpp definiert einen Wï¿½rfel ï¿½ber seine 6 Seiten
     Last Update:  13.10.2011   W.-D. Groch
-*/ 
+*/
+
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
 #include <GL/freeglut.h>
+#endif
 #include "Wuerfel.h"
 
 
 void Wuerfel(GLfloat fSeitenL)
-{ 
+{
 	glBegin(GL_POLYGON);   //Vorderseite
 	glColor4f(1.0f,0.0f,0.0f,1.0f);	//ROT
 	glVertex3f(-fSeitenL/2.0f,-fSeitenL/2.0f,+fSeitenL/2.0f);
@@ -49,7 +54,7 @@ void Wuerfel(GLfloat fSeitenL)
 	glVertex3f(-fSeitenL/2.0f,+fSeitenL/2.0f,-fSeitenL/2.0f);
 	glColor4f(0.0f,0.0f,0.0f,1.0f); //SCHWARZ
 	glVertex3f(-fSeitenL/2.0f,-fSeitenL/2.0f,-fSeitenL/2.0f);
-	glColor4f(1.0f,0.0f,0.0f,1.0f); //ROT	
+	glColor4f(1.0f,0.0f,0.0f,1.0f); //ROT
 	glVertex3f(-fSeitenL/2.0f,-fSeitenL/2.0f,+fSeitenL/2.0f);
 	glColor4f(1.0f,0.0f,1.0f,1.0f); //MAGENTA
 	glVertex3f(-fSeitenL/2.0f,+fSeitenL/2.0f,+fSeitenL/2.0f);
