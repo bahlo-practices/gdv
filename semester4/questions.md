@@ -1,21 +1,25 @@
 # Teil 1
 
 1. Nach der Ausführung des Programmes sehe ich ein rotes Quadrat in der Fenstermitte
-2. glBegin() und glEnd() werden zum rendern der Szene benötigt
+2. glBegin() und glEnd() umschließene die Eckpunkte einer Form
 3. Nach glBegin() vor glVertext3f()
-4. Vor der glLoadIdentity()
-5. Logischerweise muss zuerst glClear() aufgerufen werden, bevor glClearColor() aufgerufen wird. Sonst würde die gerade gesetzte Hintergrundfarbe direkt wieder gelöscht werden.
-6. Die verschiedenen Frames würden sich überlagern
+4. Vor der glLoadIdentity(), da diese alles zurücksetzt
+5. Logischerweise muss zuerst glClear() aufgerufen werden, bevor
+   glClearColor() aufgerufen wird. Sonst würde die gerade gesetzte
+   Hintergrundfarbe direkt wieder gelöscht werden.
+6. Die verschiedenen Frames würden sich überlagern (?)
 7. Nur die grüne
 8. Die Fläche, die zuletzt gezeichnet wurde, überlagert alle anderen
 9. a) Ja, wenn man die Fenstergröße verändert, verändert sich auch das View
-   b)
+   b) ?
 
 # Teil 2
-10. Man sieht die Rückseite, weil die Kamera so ausgerichtet ist
-11.
+10. Man sieht die Rückseite, weil die Kamera vom Ursprung nach vorne schaut,
+    also vom inneren des Würfels
+11. Kamerapositionen
   a) `gluLookAt ( 0., 1., 1., 0., 0., 0., 0., 1., 0.)`, `gnuOrtho` ist nicht richtig gesetzt, weil wir zu nah dran sind
   b) `gluLookAt ( 1., 0., 0., 0., 0., 0., 0., 1., 0.)` und `glOrtho( -1., 1., -1., 1., 0.0, 3.0)`
   c) `gluLookAt ( 1., 1., 0., 0., 0., 0., 0., 1., 0.)`
 12. Ja, nach den jeweiligen glPushMatrix Befehl
+13. ?
 
