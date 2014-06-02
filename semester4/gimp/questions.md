@@ -1,10 +1,9 @@
 # Fragen
 ## Frage 1.1
-Weil die Farbkanäle R, G und B den gleichen Wert haben, so können keine
-Unterschiede erkannt werden
+Weil Helligkeit und Sätting zu niedrig sind
 
 ## Frage 1.2
-Durch differenzierung der Farbkanäle
+In CMYK-Ebenen gesplittet, dann ohne K wieder nach CMY zusammengeführt
 
 ## Frage 2.1
 - A stimmt mit 4 im Kanal H überein
@@ -12,8 +11,10 @@ Durch differenzierung der Farbkanäle
 - C stimmt mit 1 im Kanal S überein
 - D stimmt mit 5 im Kanal G überein
 - E stimmt mit 6 im Kanal B überein
-- F stimmt mit 4 im Kanal V überein
+- F stimmt mit 3 im Kanal V überein
 
 ## Frage 3.1
-1. Im Panel Hue-Saturation Hue auf 72 gestellt
-2. Die Saturation auf -30 heruntergedreht
+1. Farbe -> Farbton, Sättigung
+2. Magenta auf Hue: 76, Lightness -12, Saturation: -34
+3. Grün auf Hue: 74
+4. Rot auf Hue: 63
