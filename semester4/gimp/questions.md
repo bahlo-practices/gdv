@@ -18,3 +18,30 @@ In CMYK-Ebenen gesplittet, dann ohne K wieder nach CMY zusammengeführt
 2. Magenta auf Hue: 76, Lightness -12, Saturation: -34
 3. Grün auf Hue: 74
 4. Rot auf Hue: 63
+
+## Frage 4.1
+### Invertieren
+Wir schieben den Punkt unten links komplett die Y-Achse nach oben und den
+Punkt oben rechts komplett nach unten
+
+### Kontrast vermindern
+Wir schieben die beiden Punkte in die Mitte der Y-Achse, sodass wenige
+Y-Werte auf alle X-Werte abgebildet werden
+
+### Restaurieren
+Wir schieben die beiden Punkte in die Mitte auf der X-Achse, sodass wieder
+viele Y-Werte auf alle X-Werte abgebildet werden
+
+### Ergebnis
+Das Bild unterscheidet sich sichtbar vom Original, da man durch die erste
+Transformation das Grauwert-Intervall stark vermindert wurde. Dadruch hat man
+weniger Grautöne zur Verfügung, die beim Erweitern von g<sub>min</sub> und
+g<sub>max</sub> nicht ausreichen, um das ursprüngliche Bild
+wiederherzustellen.
+
+## Frage 5.1
+Die Grauwerte sind identisch.
+
+## Frage 5.2
+Es bildet die zweite Ableitung ab.
+
