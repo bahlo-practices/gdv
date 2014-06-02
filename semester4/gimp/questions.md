@@ -13,3 +13,7 @@ Durch differenzierung der Farbkanäle
 - D stimmt mit 5 im Kanal G überein
 - E stimmt mit 6 im Kanal B überein
 - F stimmt mit 4 im Kanal V überein
+
+## Frage 3.1
+1. Im Panel Hue-Saturation Hue auf 72 gestellt
+2. Die Saturation auf -30 heruntergedreht
